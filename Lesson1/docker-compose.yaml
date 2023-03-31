@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+
+  php:
+    build:
+      context: ./
+      dockerfile: .build/php/Dockerfile
+    restart: always
+    ports:
+      - "8082:8082"
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQ_ROOT_PASSWORD: 'root'
+      MYSQL_USER: 'test'
+      MYSQL_PASSWORD: 'test'
+      MYSQL_DATABASE: 'test'
