@@ -1,10 +1,11 @@
 <?php
 
-//$dsn = 'php:host=localhost;dbname=test';
-//$username = 'test';
-//$pass = 'test';
-//
-//$dbh = new PDO($dsn, $username, $pass);
+$dsn = 'mysql:host=mysql;dbname=test';
+$username = 'test';
+$pass = 'test';
 
-echo 'hello';
-//var_dump($dbh);
+$dbh = new \PDO($dsn, $username, $pass);
+
+$sth = $dbh->prepare('SELECT * FROM News');
+$sth->execute([]);
+var_dump($sth->fetch());
