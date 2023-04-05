@@ -1,11 +1,12 @@
 <?php
 
-$dsn = 'mysql:host=mysql;dbname=test';
-$username = 'test';
-$pass = 'test';
+$config = include __DIR__ . '/config.php';
 
-$dbh = new \PDO($dsn, $username, $pass);
+$dsn = $config['db'] . ':host=' . $config['host'] . ';dbname=' . $config['dbname'];
+
+$dbh = new \PDO($dsn, $config['user'], $config['password']);
 
 $sth = $dbh->prepare('SELECT * FROM News');
+
 $sth->execute([]);
 var_dump($sth->fetch());
