@@ -4,7 +4,7 @@ services:
 
   php:
     build:
-      context: ./
+      context: Lesson1
       dockerfile: .build/php/Dockerfile
     volumes:
       - "./src:/var/www/html"

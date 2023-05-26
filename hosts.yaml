@@ -1,0 +1,5 @@
+all:
+  hosts:
+    "test.php3":
+      ansible_ssh_host: 212.193.53.111
+      ansible_ssh_user: profit

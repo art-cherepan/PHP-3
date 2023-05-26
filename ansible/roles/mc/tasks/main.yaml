@@ -1,0 +1,7 @@
+- name: Install MC
+  apt:
+    name:
+      - mc
+    state: latest
+    update_cache: true
+  become: true
