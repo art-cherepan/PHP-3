@@ -1,8 +1,0 @@
-2023-05-26 16:08:30,641 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
-2023-05-26 16:08:40,208 p=1596 u=cherepanov.a |  test.php3 | SUCCESS => {
-    "ansible_facts": {
-        "discovered_interpreter_python": "/usr/bin/python3"
-    },
-    "changed": false,
-    "ping": "pong"
-}
