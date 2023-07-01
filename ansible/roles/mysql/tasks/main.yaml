@@ -12,6 +12,12 @@
     name: python3-mysqldb
     state: latest
 
+- name: Start and enable Mysql service
+  service:
+    name: mysql
+    enabled: yes
+    state: started
+
 - name: Update mysql root password for all root accounts
   become: true
   mysql_user:
