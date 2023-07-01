@@ -5,5 +5,5 @@ return [
     'host' => 'mysql',
     'dbname' => 'test',
     'user' => 'test',
-    'password' => 'test'
+    'password' => 'test',
 ];
